@@ -1,0 +1,345 @@
+   
+    html
+    {
+        background: url('bg.png');
+    }
+    
+    body
+    {
+        margin: 30px auto;
+        padding: 20px;
+        width:980px;
+        background: #fff;
+        font-family: 'trebuchet MS', Arial, helvetica;
+        
+        -moz-border-radius: 10px;
+        border-radius: 10px;        
+        -moz-box-shadow: 0 0 10px #555;
+        -webkit-box-shadow: 0 0 10px #555;
+        box-shadow: 0 0 10px #555;
+    }
+    
+    h1:after, h1:before,
+    h2:after, h2:before,
+    #twitter-follow:after, #twitter-follow:before
+    {
+        content: '';
+        position: absolute;
+    }
+    
+    /* ---------------------------------------------- */   
+    
+    h1{
+        text-align: center;
+        position: relative;
+        color: #721A1A;    
+        margin: 0 -30px 30px -30px;
+        padding: 10px 0; 
+        text-shadow: 0 1px rgba(0,0,0,.8);
+        background: #1E90FF;
+        background-image: -moz-linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+        background-image: -webkit-linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+		background-image: -o-linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+		background-image: -ms-linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+        background-image: linear-gradient(rgba(255,255,255,.3), rgba(255,255,255,0));
+        -moz-box-shadow: 0 1px 0 rgba(0,0,0,.3);
+        -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.3);
+        box-shadow: 0 1px 0 rgba(0,0,0,.3);
+        clear: both; // Clear the Folow me on Twitter floating element
+    }
+    
+    h1:before, h1:after
+    {
+        border-style: solid;
+        border-color: transparent;
+        bottom: -10px;
+    }
+    
+    h1:before
+    {
+        border-width: 0 10px 10px 0;
+        border-right-color: #222;
+        left: 0;
+    }
+    
+    h1:after
+    {
+        border-width: 0 0 10px 10px;
+        border-left-color: #222;
+        right: 0;
+    }    
+    
+    /* ---------------------------------------------- */
+    
+    h2
+    {
+        font-size: 1em;
+        position: relative;
+        color: #1A1A1A;
+        text-shadow: 0 1px #ADD8E6;
+        background-color: #1E90FF;
+    }
+    
+    h2.left
+    {  
+        margin: 0 -20px 30px -26px;
+        padding: 10px 0 10px 30px; 
+        background-image: -moz-linear-gradient(left,rgba(255,255,255,0), #fff);
+        background-image: -webkit-linear-gradient(left,rgba(255,255,255,0), #fff);
+		background-image: -o-linear-gradient(left,rgba(255,255,255,0), #fff);
+		background-image: -ms-linear-gradient(left,rgba(255,255,255,0), #fff);
+        background-image: linear-gradient(left,rgba(255,255,255,0), #fff);
+    }
+    
+    h2.right
+    {
+        text-align: right; 
+        margin: 0 -26px 30px -20px;
+        padding: 10px 30px 10px 0; 
+        background-image: -moz-linear-gradient(left,#fff, rgba(255,255,255,0));
+        background-image: -webkit-linear-gradient(left,#fff, rgba(255,255,255,0));
+		background-image: -o-linear-gradient(left,#fff, rgba(255,255,255,0));
+		background-image: -ms-linear-gradient(left,#fff, rgba(255,255,255,0));
+        background-image: linear-gradient(left,#fff, rgba(255,255,255,0));
+    }    
+    
+    h2:before, h2:after
+    {
+        border-style: solid;
+        border-color: transparent;
+        bottom: -6px;
+    }
+    
+    h2.left:before
+    {
+        border-width: 0 6px 6px 0;
+        border-right-color: #555;
+        left: 0;
+    }
+    
+    h2.right:after
+    {
+        border-width: 0 0 6px 6px;
+        border-left-color: #555;
+        right: 0;
+    }     
+    
+    /* ---------------------------------------------- */    
+    
+    #twitter-follow
+    {
+        font-size: .8em;
+        font-weight: bold;
+        position: relative;
+        margin: -26px 0 40px 0;
+        float: right;
+        color: #222;    
+        padding: 10px 30px; 
+        text-shadow: 0 1px rgba(255,255,255,.8);
+        background-color: #3bbadb;
+        background-image: -moz-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.8));
+        background-image: -webkit-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.8));
+		background-image: -o-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.8));
+		background-image: -ms-linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.8));
+        background-image: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.8));
+        -moz-box-shadow: 0 2px 2px #ccc;
+        -webkit-box-shadow: 0 2px 2px #ccc;
+        box-shadow: 0 2px 2px #ccc;
+    }
+    
+    #twitter-follow:hover
+    {
+        background-color: #81d5f0;
+    }    
+    
+    #twitter-follow:before
+    {
+        left: -6px;
+        top: 0;
+        border-color: transparent #555 #555 transparent;
+        border-style: solid;                 
+    }        
+       
+/* tabel */ 
+table {
+	width:100%;
+	margin-bottom:4px;
+}
+table tr th, table tr td {
+	padding:5px 10px; 
+}
+table tr th {
+	background:#1E90FF;
+	color:#ffffff;
+}
+table tr td {
+	border-bottom:1px solid #dddddd;
+}
+/* batas tabel */ 
+
+#container{
+	display:block;
+	overflow:hidden;
+	width: 980px;
+	margin:0 auto;
+}
+
+#container li{
+
+	float: left;
+	height: 96px;
+	list-style: none outside none;
+	margin: 6px;
+	position: relative;
+	width: 125px;
+	
+	-moz-box-shadow: 0 0 5px #000;
+	-webkit-box-shadow: 0 0 5px #000;
+	box-shadow: 0 0 5px #000;
+}
+
+#container ul{
+	overflow:hidden;
+}
+
+#container ul.hidden{
+	display:none;
+}
+.row {
+  margin-left: -20px;
+  *zoom: 1;
+}
+.row:before, .row:after {
+  display: table;
+  content: "";
+}
+.row:after {
+  clear: both;
+}
+[class*="span"] {
+  float: left;
+  margin-left: 20px;
+}
+.span1 {
+  width: 60px;
+}
+.span2 {
+  width: 140px;
+}
+.span3 {
+  width: 220px;
+}
+.span4 {
+  width: 300px;
+}
+.span5 {
+  width: 380px;
+}
+.span6 {
+  width: 460px;
+}
+.span7 {
+  width: 540px;
+}
+.span8 {
+  width: 620px;
+}
+.span9 {
+  width: 700px;
+}
+.span10 {
+  width: 780px;
+}
+.span11 {
+  width: 860px;
+}
+.span12, .container {
+  width: 940px;
+}
+.offset1 {
+  margin-left: 100px;
+}
+.offset2 {
+  margin-left: 180px;
+}
+.offset3 {
+  margin-left: 260px;
+}
+.offset4 {
+  margin-left: 340px;
+}
+.offset5 {
+  margin-left: 420px;
+}
+.offset6 {
+  margin-left: 500px;
+}
+.offset7 {
+  margin-left: 580px;
+}
+.offset8 {
+  margin-left: 660px;
+}
+.offset9 {
+  margin-left: 740px;
+}
+.offset10 {
+  margin-left: 820px;
+}
+.offset11 {
+  margin-left: 900px;
+}
+.row-fluid {
+  width: 100%;
+  *zoom: 1;
+}
+.row-fluid:before, .row-fluid:after {
+  display: table;
+  content: "";
+}
+.row-fluid:after {
+  clear: both;
+}
+.row-fluid > [class*="span"] {
+  float: left;
+  margin-left: 2.127659574%;
+}
+.row-fluid > [class*="span"]:first-child {
+  margin-left: 0;
+}
+.row-fluid > .span1 {
+  width: 6.382978723%;
+}
+.row-fluid > .span2 {
+  width: 14.89361702%;
+}
+.row-fluid > .span3 {
+  width: 23.404255317%;
+}
+.row-fluid > .span4 {
+  width: 31.914893614%;
+}
+.row-fluid > .span5 {
+  width: 40.425531911%;
+}
+.row-fluid > .span6 {
+  width: 48.93617020799999%;
+}
+.row-fluid > .span7 {
+  width: 57.446808505%;
+}
+.row-fluid > .span8 {
+  width: 65.95744680199999%;
+}
+.row-fluid > .span9 {
+  width: 74.468085099%;
+}
+.row-fluid > .span10 {
+  width: 82.97872339599999%;
+}
+.row-fluid > .span11 {
+  width: 91.489361693%;
+}
+.row-fluid > .span12 {
+  width: 99.99999998999999%;
+}
