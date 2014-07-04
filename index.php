@@ -1,50 +1,3 @@
-<?php
-function bacaHTML($url){
-     $data = curl_init();
-     curl_setopt($data, CURLOPT_RETURNTRANSFER, 1);
-     curl_setopt($data, CURLOPT_URL, $url);
-     curl_setopt($data, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6");
-     $hasil = curl_exec($data);
-     curl_close($data);
-     return $hasil;
-}
-
-//$urlshoutcast= bacaHTML('http://76.72.169.146:2012/7.html');
-//$pecah = explode('<HTML><meta http-equiv="Pragma" content="no-cache"></head>', $urlshoutcast);
-//$pecah3 = explode ('<body>', $pecah[1]);
-//$pecah2 = explode ('</body></html>', $pecah3[1]);
-//$sh = $pecah2[0];
-//$pecahi = explode(",",$sh);
-$urlshoutcast= bacaHTML('http://radio.karo.or.id:2012/7.html');
-if ($urlshoutcast)
-{
-	$pecah = explode('<HTML><meta http-equiv="Pragma" content="no-cache"></head>', $urlshoutcast);
-	$pecah3 = explode ('<body>', $pecah[1]);
-	$pecah2 = explode ('</body></html>', $pecah3[1]);
-	$sh = $pecah2[0];
-	$pecahi = explode(",",$sh);	
-}
-else
-{
-	echo "la dat datana pal";
-}
-
-
-
-$urlshoutcast2= bacaHTML('http://radio.karo.or.id:2012/played.html');
-if ($urlshoutcast2) { 
-$pecaha = explode('<table border=0 cellpadding=2 cellspacing=2>', $urlshoutcast2);
-$pecah2a = explode ('</table>',$pecaha[1]);
-$pecah3a = explode ('<b>', $pecah2a[0]);
-$pecah4a = explode ('</b>',$pecah3a[2]);
-}
-else 
-{
-echo 'er0r';
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -55,7 +8,8 @@ echo 'er0r';
     <meta name="author" content="Tommy A. Surbakti">
     <link rel="shortcut icon" href="http://cdn.karo.or.id/blogkaro/favicon.ico">
     <title>Radio Karo Online</title>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="radiokaro.css" rel="stylesheet">
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -80,6 +34,7 @@ echo 'er0r';
   background: #c4e17f;
   border-radius: 5px;
   background-color: #000000;
+  border-bottom: 7px solid #87B4BE;
 }
 
     </style>
@@ -89,7 +44,7 @@ echo 'er0r';
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-<script src="http://code.jquery.com/jquery-latest.js"></script>
+<!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
 <script>
  $(document).ready(function() {
    $("#sangana").load("sangana.php");
@@ -167,80 +122,33 @@ echo 'er0r';
                   <tr>
                     <td><div id="status">Status</div></td>
                     <th>  
-                      <?php $status = $pecahi[1];
-                      if ($status==1) {
-                        echo "<b>Online</b>";
-                      } else {
-                        echo "<b>Offline</b>";
-                      }
-                      ?>
                     </th>
                   </tr>
                   <tr>
                     <td>Online</td>
-                    <td><?php echo $pecahi[0]; ?> kalak</td>
+                    <td>kalak</td>
                   </tr>
                   <tr>
                     <td>Max</td>
-                    <td><?php echo $pecahi[3]; ?> kalak simbegi</td>
+                    <td>kalak simbegi</td>
                   </tr>
                   <tr>
                     <td>Sangana i pasang</td>
-                    <td><div id="sangana"><b><?php echo $pecahi[6]; ?></b></div></td>
+                    <td><div id="sangana"></b></div></td>
                   </tr>
               </table>
-   <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h3 class="panel-title">Aplikasi</h3>
-      </div>
-      <div class="panel-body">
-        <a href="http://download.cnet.com/Radio-Karo-Online/3000-2168_4-75760675.html" target="_blank" title="Windows" alt="Windows"><img src="windows.png" title="Windows" alt="Sentabi" class="img-circle"></a>
-        <a href="http://www.karo.or.id/aplikasi-android-radio-karo-online/" target="_blank" title="Android" alt="Android"><img src="android.png" title="Android" alt="Android" class="img-circle"></a>
-<br>Perban lagu-lagu Karo si iputar jenda lenga mbue simbaru, man apai kita simbue lagu-lagu Karo-na banci i kirimndu ku email staff@karo.or.id. Adina kirim arah TIKI/JNE/POS pe banci. Gelahna erbuena variasi lagu-lagunta. Bujur
-      </div>
-    </div>
-<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Kontak Admin</button>
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Kontak Admin</h4>
-      </div>
-      <div class="modal-body">
-        Adina lit masalah bas situs enda, ntah pe la kap banci mbegiken Radio Karo Online enda, banci kirimndu email ku staff@karo.or.id. Ras banci kam gabung ku <a href="http://www.facebook.com/groups/radiokaro/">Group Facebook Radio Karo Online</a>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
         </div>
-      </div>
-
-<div class="row">
-<br>
-  <div class="col-md-8">
-  <h4>Lagu simbaru i pasang</h4>
-              <p id="enggolewat">
-            </p>
-          <td></td>
-  </div>
-</div>
-      
-<hr>
+      </div>     
       <div class="footer">
-        <p>&copy; 2006-2014 <a href="http://surbakti.com" target="_blank"><img src="mekaro.png" width="20" height="20" alt="Surbakti" title="Surbakti" class="img-circle"></a></p>
+      <p class="theader-wrapper"></p>
+        <p>&copy; 2006-2014 <b>Surbakti</b></p>
+
       </div>
 
     </div> <!-- /container -->
 
-<div id="theader-wrapper">
-  <div id="theader">
-  </div>
+
 </div>  
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script> -->
   </body>
 </html>
