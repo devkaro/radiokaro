@@ -1,4 +1,0 @@
-[10-Sep-2013 15:39:45 Asia/Jakarta] PHP Warning:  require_once(twitteroauth.php): failed to open stream: No such file or directory in /home/karo/public_html/radio/tweet/ikoer.php on line 2
-[10-Sep-2013 15:39:45 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required 'twitteroauth.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/karo/public_html/radio/tweet/ikoer.php on line 2
-[10-Sep-2013 15:57:09 Asia/Jakarta] PHP Warning:  require_once(twitteroauth.php): failed to open stream: No such file or directory in /home/karo/public_html/radio/tweet/ikoer.php on line 2
-[10-Sep-2013 15:57:09 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required 'twitteroauth.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/karo/public_html/radio/tweet/ikoer.php on line 2

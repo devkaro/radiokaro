@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,25 +8,8 @@
     <meta name="author" content="Tommy A. Surbakti">
     <link rel="shortcut icon" href="http://cdn.karo.or.id/blogkaro/favicon.ico">
     <title>Radio Karo Online</title>
-    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="radiokaro.css" rel="stylesheet">
-    <style type="text/css">
-        #theader-wrapper {
-            border-bottom: 7px solid #87B4BE;
-        }
-        #theader {
-            width: auto;
-            margin: 0px auto;
-        }
-        .mbiring {
-            height: 5px;
-            border-top: 0;
-            background: #c4e17f;
-            border-radius: 5px;
-            background-color: #000000;
-            border-bottom: 7px solid #87B4BE;
-        }
-    </style>
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -36,10 +18,9 @@
     <![endif]-->
     <link type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jplayer/2.6.3/skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="http://files.filtagreen-global.com/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jplayer/2.6.3/jquery.jplayer/jquery.jplayer.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-
             $("#jquery_jplayer_1").jPlayer({
                 ready: function (event) {
                     $(this).jPlayer("setMedia", {
@@ -51,17 +32,35 @@
             });
         });
     </script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47963537-1', 'karo.or.id');
+  ga('send', 'pageview');
+
+</script>
 
 <script>
  $(document).ready(function() {
    $("#sangana").load("sangana.php");
    var refreshId = setInterval(function() {
-      $("#sangana").load('http://karo.or.id/radio/sangana.php?randval='+ Math.random());
-   }, 60);
+      $("#sangana").load('sangana.php?randval='+ Math.random());
+   }, 19000);
    $.ajaxSetup({ cache: false });
 });
 </script>
-
+<script>
+ $(document).ready(function() {
+     $("#rk5").load("enggolewat.php");
+   var refreshId = setInterval(function() {
+      $("#rk5").load('enggolewat.php?randval='+ Math.random());
+   }, 19000);
+   $.ajaxSetup({ cache: false });
+});
+</script>
 </head>
 
 <body>
@@ -128,18 +127,42 @@
 
             </div>
             <div class="col-md-6">
+<?php
+            function bacaHTML($url){
+     $data = curl_init();
+     curl_setopt($data, CURLOPT_RETURNTRANSFER, 1);
+     curl_setopt($data, CURLOPT_URL, $url);
+     curl_setopt($data, CURLOPT_USERAGENT, "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6");
+     $hasil = curl_exec($data);
+     curl_close($data);
+     return $hasil;
+}
+$urlshoutcast= bacaHTML('http://radio.karo.or.id:2012/7.html');
+$pecah = explode('<HTML><meta http-equiv="Pragma" content="no-cache"></head>', $urlshoutcast);
+$pecah3 = explode ('<body>', $pecah[1]);
+$pecah2 = explode ('</body></html>', $pecah3[1]);
+$sh = $pecah2[0];
+$pecahi = explode(",",$sh);
+?>
                 <table class="table table-hover">
                     <tr>
-                        <td colspan="2">
-                            <b>Online 24 Jam</b>
+                    <td>Status Radio</td>
+                        <td>
+                            <?php $status = $pecahi[1];
+if ($status==1) {
+    echo "<b>Online</b>";
+} else {
+    echo "<b>Offline</b>";
+}
+?>
                         </td>
                     </tr>
                     <tr>
-                        <td>Online</td>
-                        <td>kalak</td>
+                        <td>Simegi-megi</td>
+                        <td><b><?php echo $pecahi[0]; ?> </b> <small>kalak</small></td>
                     </tr>
-                    <tr>
-                        <td colspan="2"></b>
+                    <tr class="alert-info">
+                        <td colspan="2"><small>Sangana i putar : </small><b><p id="sangana"></p></b>
                         </td>
                     </tr>
                 </table>
@@ -150,6 +173,8 @@
                 <li><a data-toggle="tab" href="#rk3">Update</a>
                 </li>
                 <li><a data-toggle="tab" href="#rk4">Kontak</a>
+                </li>
+                <li><a data-toggle="tab" href="#rk5">Lagu si enggo lewat</a>
                 </li>
             </ul>
             <div class="tab-content">
@@ -178,10 +203,14 @@
                     <p>Adina lit masalah bas situs enda, ntah pe la kap banci mbegiken Radio Karo Online enda, banci kirimndu email ku staff@karo.or.id ntah pe akun twitter <a href="https://twitter.com/RadioKaroOnline" tar>@RadioKaroOnline</a>
                     </p>
                 </div>
+                <div id="rk5" class="tab-pane fade">
+                    <p>
+                    </p>
+                </div>                
             </div>
             <div class="footer">
                 <p class="theader-wrapper"></p>
-                <p>&copy; 2006-2014 <b>Surbakti</b>
+                <p>&copy; 2006-2014 <b>Surbakti</b> ras <a href="http://dev.karo.or.id" title="dev.karo" target="_blank">dev.karo</a>
                 </p>
             </div>
 
