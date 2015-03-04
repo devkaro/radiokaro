@@ -120,7 +120,7 @@
                         </div>
                         <div class="jp-no-solution">
                             <span>Lenga lit flash playerndu</span>
-                            download arah link enda <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                            download arah link enda <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash</a>.
                         </div>
                     </div>
                 </div>
@@ -167,50 +167,34 @@ if ($status==1) {
                     </tr>
                 </table>
             </div>
-            <ul class="nav nav-tabs" role="tablist">
-                <li class="active"><a data-toggle="tab" href="#rk2">Aplikasi</a>
-                </li>
-                <li><a data-toggle="tab" href="#rk3">Update</a>
-                </li>
-                <li><a data-toggle="tab" href="#rk4">Kontak</a>
-                </li>
-                <li><a data-toggle="tab" href="#rk5">Lagu si enggo lewat</a>
-                </li>
-            </ul>
-            <div class="tab-content">
-                <div id="rk2" class="tab-pane fade in active">
-                    <p>Jenda lit piga-piga aplikasi pemutar <b>Radio Karo Online</b> si nggo ban kami man Windows ras Android</p>
-                    <a href="http://download.cnet.com/Radio-Karo-Online/3000-2168_4-75760675.html" target="_blank" title="Windows" alt="Windows">
-                        <img src="windows.png" title="Windows" alt="Sentabi" class="img-circle">
-                    </a>
-                    <a href="http://www.karo.or.id/aplikasi-android-radio-karo-online/" target="_blank" title="Android" alt="Android">
-                        <img src="android.png" title="Android" alt="Android" class="img-circle">
-                    </a>
-                </div>
-                <div id="rk3" class="tab-pane fade">
-                    <h5>Radio Karo Online [RKO] versi 2.0</h5>
-                    <p>Bas RKO 2.0 enda lit piga-piga si tambahi ras i kurangi emekap :
-                        <ul>
-                            <li>Design web ersimple na</li>
-                            <li>Daftar lagu si mbaru putar i pindaken ku <a href="http://karo.or.id/radio/enggolewat.php" target="_blank">laguta ndai</a>
-                            </li>
-                            <li>Default HTML 5 fallback Flash Player</li>
-                        </ul>
-                    </p>
-                    <p>RKO 2.0 enda gelar rilisna <b>Lomok-Lomok Perkis</b>.</p>
-                </div>
-                <div id="rk4" class="tab-pane fade">
-                    <p>Adina lit masalah bas situs enda, ntah pe la kap banci mbegiken Radio Karo Online enda, banci kirimndu email ku staff@karo.or.id ntah pe akun twitter <a href="https://twitter.com/RadioKaroOnline" tar>@RadioKaroOnline</a>
-                    </p>
-                </div>
-                <div id="rk5" class="tab-pane fade">
-                    <p>
-                    </p>
-                </div>                
+                    <div class="col-md-12">
+                      
+                            
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                      <h3 class="panel-title"></h3>
+                                    </div>
+                                    <div class="panel-body">
+                                    Adina lit penungkunenndu banci lewat twitter <a href="https://twitter.com/RadioKaroOnline" target="_blank">@RadioKaroOnline</a>
+                                    <hr>
+                                    <b>Simbaru i putar</b>
+                                    <p id="rk5"></p>
+                                    <hr>
+                                     <p>Jenda lit piga-piga aplikasi pemutar <b>Radio Karo Online</b> si nggo ban kami man Windows ras Android</p>
+                            <a href="http://download.cnet.com/Radio-Karo-Online/3000-2168_4-75760675.html" target="_blank" title="Windows" alt="Windows">
+                                <img src="windows.png" title="Windows" alt="Sentabi" class="img-circle">
+                            </a>
+                            <a href="http://www.karo.or.id/aplikasi-android-radio-karo-online/" target="_blank" title="Android" alt="Android">
+                                <img src="android.png" title="Android" alt="Android" class="img-circle">
+                            </a>                    
+                                    </div>
+                                </div>
+
+                    </div>
             </div>
             <div class="footer">
                 <p class="theader-wrapper"></p>
-                <p>&copy; 2006-2014 <b>Surbakti</b> ras <a href="http://dev.karo.or.id" title="dev.karo" target="_blank">dev.karo</a>
+                <p>&copy; 2015 <a href="https://dev.karo.or.id" title="Dev Karo" target="_blank">dev.karo</a> &raquo; <a href="log.html" title="Log RKO" target="_blank">v 2.02</a>
                 </p>
             </div>
 
