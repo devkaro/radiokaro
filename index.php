@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Radio Karo Online, Streaming Lagu Karo, Video Karo Online, Radio Taneh Karo, Aplikasi Android Radio Karo">
     <meta name="author" content="Tommy A. Surbakti">
-    <link rel="shortcut icon" href="http://cdn.karo.or.id/blogkaro/favicon.ico">
+    <link rel="shortcut icon" href="https://cdn.karo.or.id/blogkaro/favicon.ico">
     <title>Radio Karo Online</title>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="radiokaro.css" rel="stylesheet">
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -16,9 +16,9 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-    <link type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jplayer/2.6.3/skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" />
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jplayer/2.6.3/jquery.jplayer/jquery.jplayer.min.js"></script>
+    <link type="text/css" href="https://cdn.jsdelivr.net/jplayer/2.6.4/skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jplayer/2.6.4/jquery.jplayer.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $("#jquery_jplayer_1").jPlayer({
@@ -65,7 +65,7 @@
 
 <body>
     <div class="container">
-        <img src="http://karo.or.id/radio/header.png" class="img-responsive" alt="Logo Website Radio Karo">
+        <img src="https://karo.or.id/radio/header.png" class="img-responsive" alt="Logo Website Radio Karo">
     </div>
     <div id="theader-wrapper">
         <div id="theader">
@@ -194,7 +194,7 @@ if ($status==1) {
             </div>
             <div class="footer">
                 <p class="theader-wrapper"></p>
-                <p>&copy; 2015 <a href="https://dev.karo.or.id" title="Dev Karo" target="_blank">dev.karo</a> &raquo; <a href="log.html" title="Log RKO" target="_blank">v 2.02</a>
+                <p>&copy; 2006-2016 <a href="https://dev.karo.or.id" title="Dev Karo" target="_blank">dev.karo</a> &raquo; <a href="log.html" title="Log RKO" target="_blank">v 2.1</a>
                 </p>
             </div>
 
