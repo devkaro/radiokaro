@@ -10,19 +10,19 @@ body {
   bottom: 0;
 }
 
-        #theader-wrapper {
-            border-bottom: 7px solid #87B4BE;
-        }
-        #theader {
-            width: auto;
-            margin: 0px auto;
-        }
-        .mbiring {
-            height: 5px;
-            border-top: 0;
-            background: #c4e17f;
-            border-radius: 5px;
-            background-color: #000000;
-            border-bottom: 7px solid #87B4BE;
-        }
+#theader-wrapper {
+    border-bottom: 7px solid #87B4BE;
+}
+#theader {
+    width: auto;
+    margin: 0px auto;
+}
+.mbiring {
+    height: 5px;
+    border-top: 0;
+    background: #c4e17f;
+    border-radius: 5px;
+    background-color: #000000;
+    border-bottom: 7px solid #87B4BE;
+}
 
