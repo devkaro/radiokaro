@@ -1,6 +1,6 @@
 <?php
 
-function bacaHTML($url){
+function fungsiCurl($url){
      $data = curl_init();
      curl_setopt($data, CURLOPT_RETURNTRANSFER, 1);
      curl_setopt($data, CURLOPT_URL, $url);
@@ -12,9 +12,8 @@ function bacaHTML($url){
      return $hasil;
 }
 
-$urlshoutcast= bacaHTML('http://radio.karo.or.id:2012/7.html');
-$pecah3 = explode ('</head><body>', $urlshoutcast);
-$pecah2 = explode ('</body></html>', $pecah3[1]);
-$pecahi = explode(",",$pecah2[0]);
-echo $pecahi[6]; 
+$URL= fungsiCurl('http://radio.karo.or.id:2012/7.html');
+$pecah3 = explode ('</head><body>', $URL);
+$pecahi = explode(",",$pecah3[1]);
+echo strip_tags($pecahi[6]);
 ?>
