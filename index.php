@@ -119,8 +119,8 @@
             <a href="log.html" target="_blank" title="Log Radio Karo Online">v 2.1.1</a></p>
         </div>
     </div>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jplayer/2.9.2/jquery.jplayer.min.js"></script>
     <script type="text/javascript" src="radiokaro.js"></script>
 </body>
