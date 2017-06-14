@@ -2,7 +2,7 @@ $(document).ready(function() {
 	$("#radiokaroonline").jPlayer({
 		ready: function(event) {
 			$(this).jPlayer("setMedia", {
-				mp3: "https://radio.karo.or.id:8002/;stream/1"
+				mp3: "https://radio.karo.or.id/;stream/1"
 			});
 		},
 		swfPath: "http://jplayer.org/latest/dist/jplayer",

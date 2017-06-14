@@ -9,7 +9,7 @@ function fungsiCurl($url){
      return $hasil;
 }
 
-$urlshoutcast2= fungsiCurl('https://radio.karo.or.id:8002/played.html');
+$urlshoutcast2= fungsiCurl('https://radio.karo.or.id/played.html');
 $pecaha = explode('<table border=0 cellpadding=2 cellspacing=2>', $urlshoutcast2);
 $pecah2a = explode ('</table>',$pecaha[1]);
 $pecah3a = explode ('<b>', $pecah2a[0]);
