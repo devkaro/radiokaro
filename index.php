@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Radio Karo Online, Streaming Lagu Karo, Video Karo Online, Radio Taneh Karo, Aplikasi Android Radio Karo" name="description">
     <meta content="Tommy A. Surbakti" name="author">
-    <link href="https://cdn.karo.or.id/blogkaro/favicon.ico" rel="shortcut icon">
+    <link href="favicon.png" rel="shortcut icon">
     <title>Radio Karo Online</title>
     <link href="https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="radiokaro.css" rel="stylesheet">
@@ -73,7 +73,7 @@
                      curl_close($data);
                      return $hasil;
                 }
-                $urlshoutcast= bacaHTML('http://radio.karo.or.id:2012/7.html');
+                $urlshoutcast= bacaHTML('https://radio.karo.or.id:8002/7.html');
                 $pecah = explode('<HTML><meta http-equiv="Pragma" content="no-cache"></head>', $urlshoutcast);
                 $pecah3 = explode ('<body>', $pecah[1]);
                 $pecah2 = explode ('</body></html>', $pecah3[1]);
@@ -98,7 +98,7 @@
                     <tr class="alert-info">
                         <td colspan="2">
                             <small>Sangana i putar :</small> <b></b>
-                            <p id="sangana"><b></b></p>
+                            <b><p id="sangana"></p></b>
                         </td>
                     </tr>
                 </table>
@@ -115,8 +115,8 @@
         </div>
         <div class="footer">
             <p class="theader-wrapper"></p>
-            <p>&copy; 2006-2016 <a href="https://dev.karo.or.id" target="_blank" title="Dev Karo"> dev.karo</a> &raquo; 
-            <a href="log.html" target="_blank" title="Log Radio Karo Online">v 2.1.1</a></p>
+            <p>&copy; 2006-2017 <a href="https://dev.karo.or.id" target="_blank" title="Dev Karo"> dev.karo</a> &raquo;
+            <a href="log.html" target="_blank" title="Log Radio Karo Online">v 2.4</a></p>
         </div>
     </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/2.2.4/jquery.min.js"></script>
