@@ -73,7 +73,7 @@
                      curl_close($data);
                      return $hasil;
                 }
-                $urlshoutcast= bacaHTML('https://radio.karo.or.id:8002/7.html');
+                $urlshoutcast= bacaHTML('https://radio.karo.or.id/7.html');
                 $pecah = explode('<HTML><meta http-equiv="Pragma" content="no-cache"></head>', $urlshoutcast);
                 $pecah3 = explode ('<body>', $pecah[1]);
                 $pecah2 = explode ('</body></html>', $pecah3[1]);
