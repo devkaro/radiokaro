@@ -12,7 +12,7 @@ function fungsiCurl($url){
      return $hasil;
 }
 
-$URL= fungsiCurl('https://radio.karo.or.id/7.html');
+$URL= fungsiCurl('https://bupati.karo.or.id:8080/7.html');
 $pecah3 = explode ('</head><body>', $URL);
 $pecahi = explode(",",$pecah3[1]);
 echo strip_tags($pecahi[6]);

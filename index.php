@@ -8,7 +8,7 @@
     <meta content="Tommy A. Surbakti" name="author">
     <link href="favicon.png" rel="shortcut icon">
     <title>Radio Karo Online</title>
-    <link href="https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="radiokaro.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/skin/blue.monday/css/jplayer.blue.monday.min.css" rel="stylesheet">
 </head>
@@ -73,18 +73,22 @@
                      curl_close($data);
                      return $hasil;
                 }
-                $urlshoutcast= bacaHTML('https://radio.karo.or.id/7.html');
-                $pecah = explode('<HTML><meta http-equiv="Pragma" content="no-cache"></head>', $urlshoutcast);
-                $pecah3 = explode ('<body>', $pecah[1]);
-                $pecah2 = explode ('</body></html>', $pecah3[1]);
-                $sh = $pecah2[0];
-                $pecahi = explode(",",$sh);
+                $urlshoutcast= bacaHTML('https://bupati.karo.or.id:8080/index.html?sid=1');
+                $pecah = explode('<table cellpadding="2" cellspacing="0" border="0" align="center" style="padding-left:1em;">', $urlshoutcast);
+                $akhirTabel = explode ('</table>', $pecah[1]);
+                preg_match_all("'<td>(.*?)</td>'si",$akhirTabel[0], $match);
+
+                $data = array();
+                foreach($match[0] as $el)
+                {
+                    $data[] = $el;
+                }
                 ?>
                 <table class="table table-hover">
                     <tr>
                         <td>Status Radio</td>
-                        <td><?php $status = $pecahi[1];
-                        if ($status==1) {
+                        <td><?php $status = $data[15];
+                        if ($status) {
                             echo '<p class="label label-primary">Online</span>';
                         } else {
                             echo '<p class="label label-danger">Offline</span>';
@@ -93,12 +97,18 @@
                     </tr>
                     <tr>
                         <td>Simegi-megi</td>
-                        <td><b><?php echo $pecahi[0]; ?></b> <small>kalak</small></td>
+                        <td><b><?php echo strip_tags($data[5]); ?></b> <small>kalak</small></td>
                     </tr>
                     <tr class="alert-info">
                         <td colspan="2">
-                            <small>Sangana i putar :</small> <b></b>
-                            <b><p id="sangana"></p></b>
+                            <small>Sangana i putar :</small>
+                            <p><?php echo strip_tags($data[15]);?></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <small>Dung e lagu</small>
+                            <p><b><?php echo strip_tags($data[17]);?></b></p>
                         </td>
                     </tr>
                 </table>
@@ -116,11 +126,11 @@
         <div class="footer">
             <p class="theader-wrapper"></p>
             <p>&copy; 2006-2017 <a href="https://dev.karo.or.id" target="_blank" title="Dev Karo"> dev.karo</a> &raquo;
-            <a href="log.html" target="_blank" title="Log Radio Karo Online">v 2.4</a></p>
+            <a href="log.html" target="_blank" title="Log Radio Karo Online">v 2.5</a></p>
         </div>
     </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/2.2.4/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/jplayer/2.9.2/jquery.jplayer.min.js"></script>
     <script type="text/javascript" src="radiokaro.js"></script>
 </body>
