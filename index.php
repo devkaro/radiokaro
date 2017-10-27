@@ -102,7 +102,7 @@
                     <tr class="alert-info">
                         <td colspan="2">
                             <small>Sangana i putar :</small>
-                            <p><?php echo strip_tags($data[15]);?></p>
+                            <p id="sangana"></p>
                         </td>
                     </tr>
                     <tr>
