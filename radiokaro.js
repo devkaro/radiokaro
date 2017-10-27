@@ -38,6 +38,10 @@ $(document).ready(function() {
 	var refreshId2 = setInterval(function() {
 		$("#rk5").load('enggolewat.php?randval=' + Math.random());
 	}, 19000);
+	$("#lanjutlaguna").load("laguselanjutna.php");
+	var refreshId3 = setInterval(function() {
+		$("#lanjutlaguna").load('laguselanjutna.php?randval=' + Math.random());
+	}, 19000);
 	$.ajaxSetup({
 		cache: false
 	});
