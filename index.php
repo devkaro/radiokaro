@@ -125,7 +125,7 @@
         </div>
         <div class="footer">
             <p class="theader-wrapper"></p>
-            <p>&copy; 2006-2017 <a href="https://dev.karo.or.id" target="_blank" title="Dev Karo"> dev.karo</a> &raquo;
+            <p>&copy; 2006-2019 <a href="https://dev.karo.or.id" target="_blank" title="Dev Karo"> dev.karo</a> &raquo;
             <a href="log.html" target="_blank" title="Log Radio Karo Online">v2.8</a></p>
         </div>
     </div>
