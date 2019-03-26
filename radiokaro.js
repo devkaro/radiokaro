@@ -2,13 +2,18 @@ $(document).ready(function() {
     $("#radiokaroonline").jPlayer({
         ready: function(event) {
             $(this).jPlayer("setMedia", {
-                mp3: "http://git.ndikkar.com:8000/lagu"
+                title: "Radio Karo Online",
+                mp3: "http://radio.karo.or.id:2012/;stream/1"
             });
         },
         swfPath: "http://jplayer.org/latest/dist/jplayer",
-        solution: 'html, flash',
         supplied: "mp3",
+        useStateClassSkin: true,
+        autoBlur: false,
+        smoothPlayBar: true,
         keyEnabled: true,
+        remainingDuration: true,
+        toggleDuration: true
     });
 
     $("#sangana").load("sangana.php");
