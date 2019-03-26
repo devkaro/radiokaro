@@ -1,5 +1,7 @@
-$(document).ready(function() {
-    $("#radiokaroonline").jPlayer({
+// load adina halamenna enggo dung i load.
+$(window).on('load', function() {
+
+   $("#radiokaroonline").jPlayer({
         ready: function(event) {
             $(this).jPlayer("setMedia", {
                 title: "Radio Karo Online",
@@ -16,11 +18,23 @@ $(document).ready(function() {
         toggleDuration: true
     });
 
-    $("#sangana").load("sangana.php");
+    $("#simbegi").load("api.php?listenerpeak=1");
     var refreshId = setInterval(function() {
-        $("#sangana").load('sangana.php?randval=' + Math.random());
-    }, 19000);
-    $.ajaxSetup({
-        cache: false
-    });
+        $("#simbegi").load('api.php?listenerpeak=1&rand=' + Math.random());
+    }, 19400);
+
+    $("#sangana").load("api.php?currentsong=1");
+    var refreshId = setInterval(function() {
+        $("#sangana").load('api.php?currentsong=1&rand=' + Math.random());
+    }, 19300);
+
+    $("#sienggolewat").load("api.php?history=1");
+    var refreshId2 = setInterval(function() {
+        $("#sienggolewat").load('api.php?history=1&rand=' + Math.random());
+    }, 19200);
+
+    $("#lanjutlaguna").load("api.php?nextsong=1");
+    var refreshId3 = setInterval(function() {
+        $("#lanjutlaguna").load('api.php?nextsong=1&rand=' + Math.random());
+    }, 19100);
 });
