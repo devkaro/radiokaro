@@ -5,7 +5,7 @@
 * contoh http://localhost:9090/api.php?currentsong=1&nextsong=1&history=1
 **/
 
-$serverShoutcast = 'http://radio.karo.or.id:2012';
+$serverShoutcast = 'http://SERVER:PORT';
 
 if (!empty($_GET)) {
     if (!empty($_GET['currentsong'])) {
