@@ -10,7 +10,15 @@ $serverShoutcast = 'http://SERVER:PORT';
 if (!empty($_GET)) {
     if (!empty($_GET['currentsong'])) {
         $getCurrentSong = file_get_contents("$serverShoutcast/currentsong?sid=1");
-        echo $getCurrentSong;
+        $getCurrentSongFromFile = file_get_contents("currentsong.txt");
+        echo "$getCurrentSong";
+
+        if ($getCurrentSong != $getCurrentSongFromFile) {
+            // adina la seri judulna, simpan ku file currentsong.txt
+            $currentSongtoFile = fopen("currentsong.txt", "w");
+            fwrite($currentSongtoFile, $getCurrentSong);
+            fclose($currentSongtoFile);
+        }
     }
 
     if (!empty($_GET['nextsong'])) {
