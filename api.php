@@ -8,17 +8,17 @@
 $serverShoutcast = 'http://radio.karo.or.id:2012';
 
 if (!empty($_GET)) {
-    if ($_GET['currentsong']) {
+    if (!empty($_GET['currentsong'])) {
         $getCurrentSong = file_get_contents("$serverShoutcast/currentsong?sid=1");
         echo $getCurrentSong;
     }
 
-    if ($_GET['nextsong']) {
+    if (!empty($_GET['nextsong'])) {
         $getNextSong = file_get_contents("$serverShoutcast/nextsong?sid=1");
         echo $getNextSong;
     }
 
-    if ($_GET['history']) {
+    if (!empty($_GET['history'])) {
         $getHistory = file_get_contents("$serverShoutcast/played.html?sid=1");
         $tabel = explode('<table border=0 cellpadding=2 cellspacing=2>', $getHistory);
         $akhirTabel = explode('</table>', $tabel[0]);
@@ -39,7 +39,7 @@ if (!empty($_GET)) {
         echo "</table>";
     }
 
-    if ($_GET['listenerpeak']) {
+    if (!empty($_GET['listenerpeak'])) {
         $getListener = file_get_contents("$serverShoutcast/index.html?sid=1");
         $getListenerPage = explode("Listener Peak: ", $getListener);
         $getListenerLastPage = explode("</td></tr>", $getListenerPage[1]);
