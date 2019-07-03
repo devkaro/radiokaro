@@ -6,7 +6,6 @@
 **/
 
 require "config.php";
-$serverShoutcast = 'http://SERVER:PORT';
 
 if (!empty($_GET)) {
     if (!empty($_GET['currentsong'])) {

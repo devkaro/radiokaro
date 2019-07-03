@@ -8,6 +8,8 @@ define("CONSUMERSECRET", "");
 define("ACCESSTOKEN", "");
 define("ACCESSTOKENSECRET", "");
 
+$serverShoutcast = "http://SERVER:PORT";
+
 // kirim tweet
 function kirimTweet($song)
 {
