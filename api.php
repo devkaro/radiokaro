@@ -5,6 +5,7 @@
 * contoh http://localhost:9090/api.php?currentsong=1&nextsong=1&history=1
 **/
 
+require "config.php";
 $serverShoutcast = 'http://SERVER:PORT';
 
 if (!empty($_GET)) {
@@ -18,6 +19,7 @@ if (!empty($_GET)) {
             $currentSongtoFile = fopen("currentsong.txt", "w");
             fwrite($currentSongtoFile, $getCurrentSong);
             fclose($currentSongtoFile);
+            kirimTweet($getCurrentSong);
         }
     }
 
